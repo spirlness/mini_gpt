@@ -51,6 +51,12 @@ def train(args):
         os.makedirs(args.output_dir)
         print(f"Created output directory: {args.output_dir}")
 
+    # 示例：如何使用数据加载器
+    # from mini_gpt import TextDataset, DataLoader
+    # dataset = TextDataset(args.data_path, seq_length=128)
+    # loader = DataLoader(dataset, batch_size=args.batch_size, device=args.device)
+    # x, y = loader.get_batch()  # 获取一个批次的数据
+
 
 def main():
     args = parse_args()

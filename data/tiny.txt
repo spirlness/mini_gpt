@@ -1,0 +1,10 @@
+The quick brown fox jumps over the lazy dog. This is a simple test dataset for mini GPT.
+Machine learning is the study of computer algorithms that improve automatically through experience.
+Deep learning is part of a broader family of machine learning methods based on artificial neural networks.
+Natural language processing is a subfield of linguistics, computer science, and artificial intelligence.
+A transformer is a deep learning model that adopts the mechanism of self-attention.
+GPT stands for Generative Pre-trained Transformer, a type of large language model.
+Character-level modeling treats each character as a token in the sequence.
+The goal of language modeling is to predict the next token given previous tokens.
+Training neural networks requires large amounts of data and computational resources.
+Mini GPT is a simplified implementation for educational purposes and experimentation.
