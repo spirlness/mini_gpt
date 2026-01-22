@@ -36,8 +36,17 @@ class CharTokenizer:
 
         Returns:
             List of integer indices
+
+        Raises:
+            ValueError: If text contains characters not in vocabulary
         """
-        return [self.char_to_idx[ch] for ch in text]
+        try:
+            return [self.char_to_idx[ch] for ch in text]
+        except KeyError as e:
+            raise ValueError(
+                f"Character '{e.args[0]}' not found in vocabulary. "
+                f"Available characters: {sorted(self.char_to_idx.keys())}"
+            )
 
     def decode(self, indices):
         """
@@ -65,6 +74,12 @@ class TextDataset:
         """
         with open(data_path, "r", encoding="utf-8") as f:
             self.text = f.read()
+
+        if len(self.text) <= seq_length:
+            raise ValueError(
+                f"Dataset is too small ({len(self.text)} chars). "
+                f"Must be larger than seq_length ({seq_length})."
+            )
 
         self.seq_length = seq_length
         self.tokenizer = CharTokenizer(self.text)
