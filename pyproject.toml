@@ -1,0 +1,15 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mini_gpt"
+version = "0.1.0"
+dependencies = [
+    "torch",
+    "tqdm",
+    "pyyaml",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
